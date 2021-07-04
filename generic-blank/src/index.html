@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Put your own custom styles in here -->
+    <link rel="stylesheet" href="./index.css" media="all">
+    <!-- Include Webfont to style text in custom font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- The "app" element contains any content that receives dynamic updates -->
+    <div id="app">
+	<!--<video autoplay muted loop class="background" id="backgroundVideo">
+            <source src="../uibuilder/common/videos/Sun.mp4" type="video/mp4" />
+        </video>-->
+		<div id="top"><div class="displayText"></div><div class="timerText">{{msg.timerText}}</div></div>
+		<div id="middle">
+		    <div class="screen"><div id="screen-inner">
+				<img ref="imgRef" src="" alt="" id="clueImage">
+				<video autoplay ref="videoOverlay" class="overlay" id="overlayVideo" src=""></video>
+			</div></div>
+			
+			<audio autoplay ref="clueSound" src=""></audio>
+			<audio autoplay ref="bgAudio" src=""></audio>
+			<audio autoplay ref="effectAudio" src=""></audio>
+		</div>
+        <div id="bottom">
+			<div class="clueText">{{msg.clueText}}</div>
+			</div>
+		
+        
+    </div>
+    <!-- uibuilder script libraries -->
+    <script src="../uibuilder/vendor/socket.io/socket.io.js"></script>
+    <script src="../uibuilder/vendor/vue/dist/vue.min.js"></script>
+    <script src="./uibuilderfe.min.js"></script>
+    <!-- Put any additional custom code in here -->
+    <script src="./index.js"></script>
+</body>
+</html>
